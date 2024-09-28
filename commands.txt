@@ -1,0 +1,5 @@
+docker build . = builds the image the Docker file.
+ docker images --all = show all the images
+docker run -p 3000:3000 $imageId (run the timage and expose the port 3000 to out side from a container)
+docker ps = list al running containers 
+docker stop $ContainerName  = stop the container
