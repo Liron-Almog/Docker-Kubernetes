@@ -1,5 +1,16 @@
+--Chapter 1
+
 docker build . = builds the image the Docker file.
- docker images --all = show all the images
+docker images --all = show all the images
 docker run -p 3000:3000 $imageId (run the timage and expose the port 3000 to out side from a container)
-docker ps = list al running containers 
+docker ps = list all running containers 
 docker stop $ContainerName  = stop the container
+
+--Chapter 2
+docker ps -a = show all the containers.
+docker ps = all the container that running
+docker run -it node = expose an interactive session from indside the container to our hosting machine 
+docker build .= bulid a new custom image base on dockerfile
+docker run -p 3000:80 #id  = 3000 is tell to docker should be accessible 
+docker --help = show all the commands
+docker ps --help = show all the available config option for docker ps
