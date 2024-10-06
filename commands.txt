@@ -61,3 +61,5 @@ Chapter-6
 docker-compose up  -d = for building and pulling all the images 
 docker-compose down = delete all container and the default networ it created 
 docker-compose down -v= delete all container and the default networ it created  and volumes
+docker-compose up --build = for building and force to build all the images
+docker-compose build = build the images but not run the containers
