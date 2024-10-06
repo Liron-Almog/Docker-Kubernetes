@@ -32,3 +32,25 @@ docker tag oldName NewName = Change the name of the image (we create clone from 
 docker login = login to dockerhub
 docker logout 
 docker push $ImageName = push to dockerHub
+
+--Chapter 3
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback ImageName = to create name volume
+In Docker file this VOLUME ["/APP/NODE_MODULES"] == docker run -v /app/NODE_MODULES (annonymus volume)
+docker run -d --rm -p 3000:80 --name feedback-app 
+                            -v $ValumeName:$PathInProject this what i want to save //this is the ValumeName
+docker run -d --rm -p 3000:80 --name feedback-app 
+                            -v $ValumeName:$PathInProject -v "The path of all project" //this is  BindMounts !!!
+
+docker run -d --rm -p 3000:80 --name feedback-app 
+                            -v $ValumeName:$PathInProject -v "The path of all project:ro" //I restrict the bindMounts only to read !!!
+docker volume inspect $VolumeName = information about that volume 
+docker run feedback-app  --env-file = envrioment file
+docker run feedback-app -enc PORT=8000 = send envrioment vars
+docker run feedback-app -e PORT=8000
+
+
+
+Chapter-4 
+docker container inspect $ContainerName  = Show detail about that container
+docker network create  $ContainerNetworkName 
+docker run --newwork $TheNameOfNetWorkThatIcreated $ImageName= connection the docker to new of cointaer network
