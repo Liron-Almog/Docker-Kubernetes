@@ -56,6 +56,8 @@ docker network create  $ContainerNetworkName
 docker run --newwork $TheNameOfNetWorkThatIcreated $ImageName= connection the docker to new of cointaer network
 
 
-Chapter-5
+Chapter-6
 
-docker run -d -p 2222:80 --name serverContainer -v serverBindMount:C:\Users\97250\Desktop\Docker\Chapter-5\backend:ro" -v serverLog:/app/logs -v /app/node_modules  --network network-container 
+docker-compose up  -d = for building and pulling all the images 
+docker-compose down = delete all container and the default networ it created 
+docker-compose down -v= delete all container and the default networ it created  and volumes
