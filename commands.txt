@@ -22,7 +22,9 @@ docker logs -f $ContainerName = see all the past logs and stay in attached mode
 docker run -it $DcokerId = to enable to interacte and expost terminal of in container 
 docker rm $ContainerId = delete contaier (if the container works you will cant to delete him)
 docker rmi $ImagesId = delete the image ( if the image contains in the container so you will not to ebaled to delete it)
-docker image prune = this will remove all images that unuse 
+docker image prune = this will remove all the images that unuse 
+docker container prune = this will remove all the containers that unuse 
+
 docker image inspect $ContainerId = infromation about image
 docker cp $nameContinaer:folderInCointainer sourceInLocaly = from container to local 
 docker cp sourceInLocaly $nameContinaer:folderInCointainer = from local to container 
@@ -63,3 +65,10 @@ docker-compose down = delete all container and the default networ it created
 docker-compose down -v= delete all container and the default networ it created  and volumes
 docker-compose up --build = for building and force to build all the images
 docker-compose build = build the images but not run the containers
+
+Chapter-7
+
+docker-compose run $SpesicfiServiceInCopmpose = to run one container from compose file
+docker-compose run = it is not remove the container(like --rm) after this will be finish
+docker exec -it $imageName npm init  = run the npm command inside the container 
+docker run -it node $cmdToOverrideTheDefult Command 
