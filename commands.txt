@@ -72,3 +72,6 @@ docker-compose run $SpesicfiServiceInCopmpose = to run one container from compos
 docker-compose run = it is not remove the container(like --rm) after this will be finish
 docker exec -it $imageName npm init  = run the npm command inside the container 
 docker run -it node $cmdToOverrideTheDefult Command 
+
+Chapter-8
+docker-compose run -d server php mysql   
