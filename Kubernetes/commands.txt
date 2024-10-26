@@ -1,0 +1,25 @@
+Chapter 2
+
+
+minikube start --driver=docker = start minikube by docker
+minikube status
+kubectl help
+kubectl create deployment --image= = to craete a new deployment object
+kubectl get deployments = get how many deplomnets we have in out cluster 
+kubectl get pods = see all created by our deployments
+minikube dashboard = open web dashbords 
+kubectl epose deployment first-app --type=ClusterIP(reachable from inside the cluster)/NodePort(should be expose by the IP address of the worker node)/LoadBalancer(genarete unique address for this service enable to pods talk) --port=8080
+kubectl get services
+minikube service first-app = this commad inly for minicube if i would created that on the cloud  it is not neccesary 
+kubectl scale deployment/first-app --replicas=3
+kubectl set image deployment/first-app image-for-new-chapter-kub=lironalmog/image-for-new-chapter-kub:2 = update image in cluster(needs to change the version of image for trigger the kuberenetes to download the image)
+kubectl tollout status deployment/first-app= view the current updating status
+kubectl rollout undo deployment/first-app = undo the last deployment
+kubectl rollout history deployment/first-app = see the history
+kubectl rollout history deployment/first-app --revision =2(exp)
+kubectl rollout undo deployment/first-app --to--revision=3(exp) = to specific revision
+kubectl delete service first-app
+kubectl delete deployment first-app
+kubectl apply -f deployment.yaml
+minikube service backend = show the ports that we exposed
+kubectldelete -f=deployment.yaml -f=service.yaml = delete all the resource(but not the file!!!)

@@ -1,0 +1,19 @@
+apiVersion: apps/v1  
+kind: Deployment
+metadata:
+  name: app-second
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: second-app
+      tier: backend
+  template:
+    metadata:
+      labels:  
+        app: second-app
+        tier: backend
+    spec:
+      containers:
+        - name: second-node
+          image: lironalmog/image-for-new-chapter-kub:2
